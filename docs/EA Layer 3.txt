@@ -1,0 +1,48 @@
+Inside of each block:
+
+	if version 5:
+	
+		8 bits - nonzero indicates the presence of uncompressed samples at the end of the granule 
+	
+	if version 6 or 7 (CHECK):
+	
+		1 bit - there is an extended header
+		1 bit - unknown
+		2 bits - unused
+		12 bits - total granule size including this small header and uncompressed samples
+		
+		if extended header:
+		
+			2 bits - mode
+			10 bits - sample frames to discard (mode == 0) or skip (mode == 1 or 2) before outputting the uncompressed samples (CHECK!)
+			10 bits - number of uncompressed sample frames at the end of the granule
+			10 bits - granule size (can be zero)
+	
+	all versions:
+	
+		2 bits - MPEG version
+		2 bits - MPEG sample rate index
+		2 bits - MPEG channel mode
+		2 bits - MPEG mode extension
+		1 bit - which granule
+		
+		if granule is 1 and version is 3 (MPEG 1.0):
+		
+			channels * 4 bits - MPEG scfsi
+			
+		MPEG side info beginning after scfsi for each channel
+		MPEG data
+		
+	if version 5 and there are uncompressed samples:
+	
+		32 bits - number of uncompressed sample frames
+		32 bits - offset in the outputted granule these samples go (CHECK)
+		channels * uncompressed * 16 bits - uncompressed PCM samples
+	
+	if version 6 or 7 and there are uncompressed samples:
+	
+		channels * uncompressed * 16 bits - uncompressed PCM samples
+
+
+That was one granule. No go back to the beginning!
+

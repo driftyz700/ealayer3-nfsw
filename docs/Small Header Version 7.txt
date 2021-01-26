@@ -1,0 +1,17 @@
+AB00CCCC CCCCCCCC  if A is set:  DDEEEEEE EEEEFFFF FFFFFFGG GGGGGGGG
+
+A = whether or not the second 4 bytes must be read from the file
+B = ???? B + 1 is what's stored, not used by program though
+C = total granule size in bytes (including these 2 or 6 bytes and uncompressed samples)
+D = mode:
+E = bytes to discard (mode == 0) or skip (mode == 1 or 2) before outputting the uncompressed samples
+	(when mode == 3 this is ignored)
+F = number of uncompressed sample frames
+G = MPEG granule size (can be zero)
+
+
+
+	if 0: 576 - E if G == 0 then F
+	if 1: 576 if G == 0 then F
+	if 2: 576 if G == 0 then F * 2
+	if 3: 576

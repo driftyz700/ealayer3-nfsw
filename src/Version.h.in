@@ -1,0 +1,12 @@
+/*
+    EA Layer 3 Extractor/Decoder
+    Copyright (C) 2010, Ben Moench.
+    See License.txt
+*/
+
+#pragma once
+
+#define ealayer3_VERSION_MAJOR @ealayer3_VERSION_MAJOR@
+#define ealayer3_VERSION_MINOR @ealayer3_VERSION_MINOR@
+#define ealayer3_VERSION_PATCH @ealayer3_VERSION_PATCH@
+
