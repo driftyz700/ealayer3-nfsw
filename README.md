@@ -113,6 +113,7 @@ Fun fact: Based on that you can also make this to work with older versions of ea
 Have fun playing with your own custom music in game :)
 
 Big Thanks to: \
+Ben Moench: For initially creating the ealayer3 tool \
 Translu:    For patching ealayer3 to support looped files as well as proper multi-channel support, for real thanks mate \
-DriFtyZ:	  For writing this doc.\
+DriFtyZ:	  For putting this together for nfsw.\
 Hypercycle: For showing me that the rwac_music nodes aren't actually hardcoded and you can add more tracks to the game (based on some previous assumptions)
