@@ -69,7 +69,7 @@ update_field rwac_music customtrack_01 0xdaa0c91a CustomTrack_01.snr
 update_field rwac_music customtrack_02 0xdaa0c91a CustomTrack_02.snr
 update_field rwac_music customtrack_03 0xdaa0c91a CustomTrack_03.snr
 
-#CANCEL FREEROAM HERO (We don't want this to conflict the previous track that will be most likely still playing)
+#[OPTIONAL] CANCEL FREEROAM HERO (We don't want this to conflict the previous track that will be most likely still playing)
 update_field blackboard audio_freeroam MinTimePlayerStoppedHeroTrack 0
 delete_field blackboard audio_freeroam FreeroamHeroMusicTrack
 delete_field blackboard audio_freeroam MinTimePlayerAtHighSpeed
